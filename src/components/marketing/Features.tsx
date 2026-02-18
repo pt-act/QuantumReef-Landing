@@ -22,7 +22,7 @@ function FeatureCard({ icon, title, description, designId }: FeatureCardProps) {
   return (
     <Card
       data-design-id={designId}
-      className="group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300 hover:border-primary/30"
+      className="group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300 hover:border-primary/30 animate-on-scroll"
     >
       <CardContent data-design-id={`${designId}-content`} className="p-6">
         <div
