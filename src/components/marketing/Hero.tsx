@@ -22,6 +22,11 @@ export function Hero() {
         className="absolute inset-0 -z-10"
         aria-hidden="true"
       >
+        <img
+          src="/assets/hero-bg.svg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-slow delay-1000" />

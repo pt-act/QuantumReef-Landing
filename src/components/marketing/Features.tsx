@@ -2,10 +2,10 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  IconMultiEngine,
+  IconClawtopus,
   IconSync,
   IconShield,
-  IconTerminal,
+  IconParallel,
   IconOpenSource,
   IconPlugin,
 } from "@/components/icons";
@@ -55,7 +55,7 @@ function FeatureCard({ icon, title, description, designId }: FeatureCardProps) {
 
 const features = [
   {
-    icon: <IconMultiEngine size={24} />,
+    icon: <IconClawtopus size={24} />,
     title: "Multi-Agent Orchestration",
     description:
       "Clawtopus, RovoDev, and Kiro CLI work in parallel on different features—all visible, all coordinated. Like a living reef ecosystem, agents collaborate symbiotically.",
@@ -76,7 +76,7 @@ const features = [
     designId: "feature-card-privacy",
   },
   {
-    icon: <IconTerminal size={24} />,
+    icon: <IconParallel size={24} />,
     title: "Parallel Execution",
     description:
       "Not delegation—true parallelization. Multiple agents tackle different features simultaneously while maintaining coherent state across all work streams.",
