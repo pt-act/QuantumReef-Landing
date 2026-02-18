@@ -12,8 +12,18 @@ interface Creature {
   delay: number;
 }
 
+interface Bubble {
+  id: number;
+  x: number;
+  bottom: number;
+  size: number;
+  duration: number;
+  delay: number;
+}
+
 export function UnderwaterBackground() {
   const [creatures, setCreatures] = useState<Creature[]>([]);
+  const [bubbles, setBubbles] = useState<Bubble[]>([]);
 
   useEffect(() => {
     // Create random floating creatures
@@ -24,15 +34,29 @@ export function UnderwaterBackground() {
       newCreatures.push({
         id: i,
         emoji: seaCreatures[Math.floor(Math.random() * seaCreatures.length)],
-        x: Math.random() * 100, // Random horizontal position (%)
-        y: Math.random() * 100, // Random vertical position (%)
-        size: 20 + Math.random() * 40, // Random size (20-60px)
-        duration: 15 + Math.random() * 25, // Random animation duration (15-40s)
-        delay: Math.random() * 10, // Random delay (0-10s)
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: 20 + Math.random() * 40,
+        duration: 15 + Math.random() * 25,
+        delay: Math.random() * 10,
+      });
+    }
+
+    // Create random bubbles
+    const newBubbles: Bubble[] = [];
+    for (let i = 0; i < 30; i++) {
+      newBubbles.push({
+        id: i,
+        x: Math.random() * 100,
+        bottom: -(Math.random() * 20),
+        size: 4 + Math.random() * 12,
+        duration: 8 + Math.random() * 15,
+        delay: Math.random() * 5,
       });
     }
 
     setCreatures(newCreatures);
+    setBubbles(newBubbles);
   }, []);
 
   return (
@@ -51,7 +75,7 @@ export function UnderwaterBackground() {
             fontSize: `${creature.size}px`,
             animationDuration: `${creature.duration}s`,
             animationDelay: `${creature.delay}s`,
-            opacity: 0.3 + Math.random() * 0.4,
+            opacity: 0.4,
           }}
         >
           {creature.emoji}
@@ -59,17 +83,17 @@ export function UnderwaterBackground() {
       ))}
 
       {/* Bubbles/particles */}
-      {Array.from({ length: 30 }).map((_, i) => (
+      {bubbles.map((bubble) => (
         <div
-          key={`bubble-${i}`}
+          key={bubble.id}
           className="absolute rounded-full bg-cyan-400/20 animate-bubble"
           style={{
-            left: `${Math.random() * 100}%`,
-            bottom: `-${Math.random() * 20}%`,
-            width: `${4 + Math.random() * 12}px`,
-            height: `${4 + Math.random() * 12}px`,
-            animationDuration: `${8 + Math.random() * 15}s`,
-            animationDelay: `${Math.random() * 5}s`,
+            left: `${bubble.x}%`,
+            bottom: `${bubble.bottom}%`,
+            width: `${bubble.size}px`,
+            height: `${bubble.size}px`,
+            animationDuration: `${bubble.duration}s`,
+            animationDelay: `${bubble.delay}s`,
           }}
         />
       ))}
