@@ -56,30 +56,30 @@ function FeatureCard({ icon, title, description, designId }: FeatureCardProps) {
 const features = [
   {
     icon: <IconMultiEngine size={24} />,
-    title: "Multi-Agent Orchestration",
+    title: "Multi-Engine Architecture",
     description:
-      "Clawtopus, RovoDev, and Kiro CLI work in parallel on different features—all visible, all coordinated. Like a living reef ecosystem, agents collaborate symbiotically.",
+      "Switch between OpenCode, RovoDev, and Kiro CLI based on your needs. Pluggable engine framework with unified interface. No vendor lock-in, no migration.",
     designId: "feature-card-multi-engine",
   },
   {
     icon: <IconSync size={24} />,
-    title: "Transparent Collaboration",
+    title: "Advanced Workflow States",
     description:
-      "Watch agents work in real-time. See progress, decisions, and blockers. Full visibility into multi-agent workflows across all your devices.",
+      "Track sessions through todo → in_progress → needs_review → done. Star important work, organize with inbox/archive buckets. Full workflow visibility.",
     designId: "feature-card-sync",
   },
   {
     icon: <IconShield size={24} />,
-    title: "Local-First Privacy",
+    title: "Enterprise-Grade Security",
     description:
-      "Your code never leaves your machine unless you choose. Enterprise-grade security with CVE-2026-22812 hardening built in.",
+      "4 permission modes (deny/readonly/localreadonly/allow), CVE-2026-22812 mitigation, XSS protection, rate limiting, and pairing code expiry. Production-ready from day one.",
     designId: "feature-card-privacy",
   },
   {
     icon: <IconTerminal size={24} />,
-    title: "Parallel Execution",
+    title: "Cross-Dimensional Sync",
     description:
-      "Not delegation—true parallelization. Multiple agents tackle different features simultaneously while maintaining coherent state across all work streams.",
+      "Start in terminal, continue on desktop, review on mobile. True workflow continuity with persistent session states across all platforms.",
     designId: "feature-card-session",
   },
   {

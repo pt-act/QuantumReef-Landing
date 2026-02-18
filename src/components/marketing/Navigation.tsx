@@ -19,11 +19,32 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      // Check horizontal scroll instead of vertical
+      setIsScrolled(window.scrollX > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const sectionIndex = {
+      "#features": 1,
+      "#comparison": 2,
+      "#how-it-works": 3,
+      "#faq": 5,
+      "#download": 6,
+    }[href];
+    
+    if (sectionIndex !== undefined) {
+      const targetX = sectionIndex * window.innerWidth;
+      window.scrollTo({
+        left: targetX,
+        behavior: "smooth",
+      });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header
@@ -65,14 +86,15 @@ export function Navigation() {
             className="hidden md:flex items-center gap-1"
           >
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
+                onClick={(e) => scrollToSection(e, link.href)}
                 data-design-id={`navigation-link-${link.label.toLowerCase().replace(" ", "-")}`}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50"
+                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50 cursor-pointer"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -103,7 +125,7 @@ export function Navigation() {
               className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2"
               asChild
             >
-              <a href="#download">
+              <a href="#download" onClick={(e) => scrollToSection(e, "#download")}>
                 Download
               </a>
             </Button>
@@ -130,15 +152,15 @@ export function Navigation() {
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
+                  onClick={(e) => scrollToSection(e, link.href)}
                   data-design-id={`navigation-mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
-                  className="px-4 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-4 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50 cursor-pointer"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
               <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-border/50">
                 <Button
@@ -163,7 +185,7 @@ export function Navigation() {
                   className="justify-center bg-primary text-primary-foreground"
                   asChild
                 >
-                  <a href="#download">
+                  <a href="#download" onClick={(e) => scrollToSection(e, "#download")}>
                     Download Now
                   </a>
                 </Button>

@@ -8,3 +8,4 @@ export { Subscribe } from "./Subscribe";
 export { FAQ } from "./FAQ";
 export { Download } from "./Download";
 export { Footer } from "./Footer";
+export { ScrollIndicator } from "./ScrollIndicator";

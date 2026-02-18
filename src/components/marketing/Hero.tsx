@@ -53,16 +53,16 @@ export function Hero() {
             data-design-id="hero-title"
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700"
           >
-            <span className="block">Where AI Agents</span>
-            <span className="block text-gradient mt-2">Collaborate</span>
-            <span className="block mt-2">in Harmony.</span>
+            <span className="block">One Workspace.</span>
+            <span className="block text-gradient mt-2">Any AI Engine.</span>
+            <span className="block mt-2">Every Device.</span>
           </h1>
 
           <p
             data-design-id="hero-description"
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-6 duration-900"
           >
-            Multi-agent AI orchestration platform where Clawtopus, RovoDev, and Kiro CLI work in parallel—all visible, all coordinated. Like a living reef ecosystem, agents collaborate symbiotically while you maintain full transparency and control.
+            The evolved AI development platform with multi-engine support, advanced workflow management, and cross-platform continuity. Switch between OpenCode, RovoDev, and Kiro CLI without migration. Your sessions sync everywhere—desktop, mobile, CLI.
           </p>
 
           <div

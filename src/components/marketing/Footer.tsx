@@ -41,7 +41,7 @@ export function Footer() {
   return (
     <footer
       data-design-id="footer-section"
-      className="border-t border-border/50 bg-card/30"
+      className="bg-card/30"
     >
       <div
         data-design-id="footer-container"

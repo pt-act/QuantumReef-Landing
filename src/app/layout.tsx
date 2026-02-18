@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL || "https://quantumreef.dev"
   ),
-  title: "QuantumReef | Where AI Agents Collaborate in Harmony",
+  title: "QuantumReef | AI Development Platform. Evolved.",
   description:
-    "Multi-agent AI orchestration platform. Clawtopus, RovoDev, and Kiro CLI working in parallel—all visible, all coordinated. Local-first, transparent, symbiotic development.",
+    "Multi-engine AI platform with advanced workflow management and cross-platform continuity. Switch between OpenCode, RovoDev, and Kiro CLI. Desktop, mobile, CLI—sessions sync everywhere. Built for the future of collaborative AI development.",
   keywords: [
     "multi-agent AI",
     "AI orchestration",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://quantumreef.dev",
     siteName: "QuantumReef",
-    title: "QuantumReef | Where AI Agents Collaborate in Harmony",
+    title: "QuantumReef | AI Development Platform. Evolved.",
     description:
-      "Multi-agent AI orchestration platform. Transparent, parallel, symbiotic development with Clawtopus ecosystem.",
+      "Multi-engine AI platform with workflow management, cross-platform sync, and enterprise security. The evolved foundation for collaborative AI development.",
     images: [
       {
         url: "/og-image.png",
