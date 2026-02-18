@@ -51,10 +51,21 @@ export function Subscribe() {
         data-design-id="subscribe-container"
         className="container mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <Card
-          data-design-id="subscribe-card"
-          className="max-w-2xl mx-auto overflow-hidden gradient-border glow"
-        >
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+          {/* Social Preview Image */}
+          <div className="hidden md:block">
+            <img 
+              src="/assets/social-preview.svg" 
+              alt="QuantumReef Social Preview" 
+              className="w-full h-auto rounded-2xl shadow-2xl"
+            />
+          </div>
+
+          {/* Subscribe Card */}
+          <Card
+            data-design-id="subscribe-card"
+            className="overflow-hidden gradient-border glow"
+          >
           <CardContent
             data-design-id="subscribe-card-content"
             className="p-8 sm:p-12"
@@ -189,6 +200,7 @@ export function Subscribe() {
             </p>
           </CardContent>
         </Card>
+        </div>
       </div>
     </section>
   );
