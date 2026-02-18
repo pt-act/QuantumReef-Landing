@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  output: 'export',
   distDir: process.env.NODE_ENV === 'production' 
-    ? (process.env.BUILD_DIR || '.next-build')
+    ? (process.env.BUILD_DIR || 'out')
     : '.next',  
   images: {
     unoptimized: true,

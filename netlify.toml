@@ -3,7 +3,8 @@
 
 [build]
   command = "npm run build"
-  publish = ".next-build"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "20"
+  NODE_ENV = "production"
