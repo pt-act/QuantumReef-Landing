@@ -9,38 +9,15 @@ export function IconLogo({ size = 32, ...props }: IconProps) {
     <svg
       width={size}
       height={size}
-      viewBox="0 0 32 32"
+      viewBox="0 0 64 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       data-design-id="icon-logo"
       {...props}
     >
-      <rect width="32" height="32" rx="8" fill="url(#logo-gradient)" />
-      <path
-        d="M8 16C8 11.5817 11.5817 8 16 8C20.4183 8 24 11.5817 24 16C24 20.4183 20.4183 24 16 24"
-        stroke="white"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M16 12V20M12 16H20"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <defs>
-        <linearGradient
-          id="logo-gradient"
-          x1="0"
-          y1="0"
-          x2="32"
-          y2="32"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#2DD4BF" />
-          <stop offset="1" stopColor="#8B5CF6" />
-        </linearGradient>
-      </defs>
+      <circle cx="32" cy="32" r="12" fill="#2BD4C3" />
+      <path d="M32 10 A 22 22 0 0 1 54 32" stroke="#9D3BF5" strokeWidth="4" strokeLinecap="round" />
+      <path d="M32 54 A 22 22 0 0 1 10 32" stroke="#2BD4C3" strokeWidth="4" strokeLinecap="round" />
     </svg>
   );
 }
@@ -545,6 +522,54 @@ export function IconSparkles({ size = 24, ...props }: IconProps) {
         strokeWidth="1.5"
         strokeLinejoin="round"
       />
+    </svg>
+  );
+}
+
+export function IconClawtopus({ size = 24, ...props }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      data-design-id="icon-clawtopus"
+      {...props}
+    >
+      <circle cx="32" cy="24" r="12" stroke="currentColor" strokeWidth="2" />
+      <path d="M22 30 C 22 45, 10 45, 10 55" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M28 34 C 28 45, 24 45, 24 55" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M36 34 C 36 45, 40 45, 40 55" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M42 30 C 42 45, 54 45, 54 55" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="26" cy="22" r="2" fill="currentColor" />
+      <circle cx="38" cy="22" r="2" fill="currentColor" />
+      <path d="M20 24 H 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M44 24 H 50" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function IconParallel({ size = 24, ...props }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      data-design-id="icon-parallel"
+      {...props}
+    >
+      <rect x="10" y="14" width="44" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
+      <rect x="10" y="28" width="44" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
+      <rect x="10" y="42" width="44" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
+      <line x1="18" y1="14" x2="18" y2="50" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" opacity="0.5" />
+      <line x1="32" y1="14" x2="32" y2="50" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" opacity="0.5" />
+      <line x1="46" y1="14" x2="46" y2="50" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" opacity="0.5" />
+      <circle cx="58" cy="18" r="2" fill="currentColor" />
+      <circle cx="58" cy="32" r="2" fill="currentColor" />
+      <circle cx="58" cy="46" r="2" fill="currentColor" />
     </svg>
   );
 }

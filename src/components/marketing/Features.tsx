@@ -2,10 +2,10 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  IconMultiEngine,
+  IconClawtopus,
   IconSync,
   IconShield,
-  IconTerminal,
+  IconParallel,
   IconOpenSource,
   IconPlugin,
 } from "@/components/icons";
@@ -55,7 +55,7 @@ function FeatureCard({ icon, title, description, designId }: FeatureCardProps) {
 
 const features = [
   {
-    icon: <IconMultiEngine size={24} />,
+    icon: <IconClawtopus size={24} />,
     title: "Multi-Engine Architecture",
     description:
       "Switch between OpenCode, RovoDev, and Kiro CLI based on your needs. Pluggable engine framework with unified interface. No vendor lock-in, no migration.",
@@ -76,7 +76,7 @@ const features = [
     designId: "feature-card-privacy",
   },
   {
-    icon: <IconTerminal size={24} />,
+    icon: <IconParallel size={24} />,
     title: "Cross-Dimensional Sync",
     description:
       "Start in terminal, continue on desktop, review on mobile. True workflow continuity with persistent session states across all platforms.",

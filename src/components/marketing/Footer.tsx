@@ -53,15 +53,15 @@ export function Footer() {
         >
           <div
             data-design-id="footer-brand"
-            className="col-span-2"
+            className="col-span-2 flex flex-col gap-6"
           >
             <Link
               href="/"
               data-design-id="footer-logo-link"
-              className="flex items-center gap-3 mb-4"
+              className="flex items-center gap-3"
               aria-label="QuantumReef Home"
             >
-              <IconLogo size={32} />
+              <IconLogo size={36} />
               <span
                 data-design-id="footer-logo-text"
                 className="text-lg font-semibold tracking-tight"
@@ -72,7 +72,7 @@ export function Footer() {
             </Link>
             <p
               data-design-id="footer-tagline"
-              className="text-sm text-muted-foreground mb-6 max-w-xs"
+              className="text-sm text-muted-foreground max-w-sm"
             >
               The unified AI development command center. Local-first,
               multi-engine, cross-platform.
