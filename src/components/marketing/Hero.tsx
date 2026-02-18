@@ -53,6 +53,15 @@ export function Hero() {
             Open Source &amp; Local-First
           </Badge>
 
+          {/* Main Logo */}
+          <div className="mb-8 flex justify-center animate-in fade-in slide-in-from-bottom-3 duration-600">
+            <img 
+              src="/assets/logo.svg" 
+              alt="QuantumReef Logo" 
+              className="w-72 h-auto drop-shadow-2xl"
+            />
+          </div>
+
           <h1
             id="hero-title"
             data-design-id="hero-title"

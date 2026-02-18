@@ -41,25 +41,19 @@
   
   html {
     scroll-behavior: smooth;
-    overflow-x: auto;
-    overflow-y: hidden;
   }
   
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Space Grotesk', system-ui, sans-serif;
-    overflow-x: auto;
-    overflow-y: hidden;
-    height: 100vh;
     /* Underwater reef gradient background */
-    background: linear-gradient(135deg, 
+    background: linear-gradient(180deg, 
       hsl(222, 47%, 4%) 0%,
       hsl(220, 50%, 6%) 25%,
       hsl(210, 55%, 8%) 50%,
       hsl(200, 60%, 10%) 75%,
       hsl(190, 65%, 12%) 100%
     );
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="24" font-size="24">🐙</text></svg>'), auto;
   }
   
   code, pre, .font-mono {
@@ -205,28 +199,7 @@
   background-size: 200% 100%;
 }
 
-/* Horizontal scroll layout */
-.horizontal-scroll-container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-.horizontal-scroll-section {
-  min-width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  position: relative;
-  /* Seamless flow - no borders */
-  border: none;
-}
+/* Vertical scroll layout (normal) */
 
 /* Custom scrollbar - horizontal optimized */
 ::-webkit-scrollbar {
