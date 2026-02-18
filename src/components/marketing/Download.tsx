@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useEffect, useState } from "react";
 
 const platforms = [
   {
@@ -59,6 +60,20 @@ const platforms = [
 ];
 
 export function Download() {
+  const [detectedPlatform, setDetectedPlatform] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Detect user's platform
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.includes('mac')) {
+      setDetectedPlatform('macOS');
+    } else if (userAgent.includes('win')) {
+      setDetectedPlatform('Windows');
+    } else if (userAgent.includes('linux')) {
+      setDetectedPlatform('Linux');
+    }
+  }, []);
+
   return (
     <section
       id="download"
@@ -100,11 +115,15 @@ export function Download() {
           data-design-id="download-grid"
           className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
         >
-          {platforms.map((platform) => (
+          {platforms.map((platform) => {
+            const isDetected = platform.name === detectedPlatform;
+            return (
             <Card
               key={platform.designId}
               data-design-id={platform.designId}
-              className="group border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/80 hover:border-primary/30 transition-all duration-300"
+              className={`group border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/80 hover:border-primary/30 transition-all duration-300 ${
+                isDetected ? 'ring-2 ring-primary/50 bg-card/70' : ''
+              }`}
             >
               <CardContent
                 data-design-id={`${platform.designId}-content`}
@@ -118,9 +137,14 @@ export function Download() {
                 </div>
                 <h3
                   data-design-id={`${platform.designId}-name`}
-                  className="text-lg font-semibold mb-2"
+                  className="text-lg font-semibold mb-2 flex items-center justify-center gap-2"
                 >
                   {platform.name}
+                  {isDetected && (
+                    <Badge variant="default" className="text-xs">
+                      Your Platform
+                    </Badge>
+                  )}
                 </h3>
                 <div
                   data-design-id={`${platform.designId}-versions`}
@@ -146,7 +170,8 @@ export function Download() {
                 </Button>
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
 
         <div
