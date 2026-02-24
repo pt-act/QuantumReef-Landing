@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { IconLogo, IconGitHub, IconMenu, IconX } from "@/components/icons";
 import { cn } from "@/lib/utils";
@@ -11,16 +12,18 @@ const navLinks = [
   { href: "#comparison", label: "Compare" },
   { href: "#how-it-works", label: "How It Works" },
   { href: "#faq", label: "FAQ" },
+  { href: "/docs", label: "Docs" },
 ];
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check horizontal scroll instead of vertical
-      setIsScrolled(window.scrollX > 20);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -28,20 +31,19 @@ export function Navigation() {
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const sectionIndex = {
-      "#features": 1,
-      "#comparison": 2,
-      "#how-it-works": 3,
-      "#faq": 5,
-      "#download": 6,
-    }[href];
-    
-    if (sectionIndex !== undefined) {
-      const targetX = sectionIndex * window.innerWidth;
-      window.scrollTo({
-        left: targetX,
-        behavior: "smooth",
-      });
+
+    if (!isHome) {
+      // Navigate to home with hash — browser handles scroll on load
+      window.location.href = `/${href}`;
+      setIsMobileMenuOpen(false);
+      return;
+    }
+
+    // Strip the leading # to get the element ID
+    const id = href.replace(/^#/, "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     setIsMobileMenuOpen(false);
   };
@@ -51,9 +53,7 @@ export function Navigation() {
       data-design-id="navigation-header"
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "glass py-3"
-          : "bg-transparent py-5"
+        isScrolled ? "glass py-3" : "bg-transparent py-5"
       )}
     >
       <nav
@@ -81,36 +81,54 @@ export function Navigation() {
             </span>
           </Link>
 
+          {/* Desktop nav links */}
           <div
             data-design-id="navigation-desktop-links"
             className="hidden md:flex items-center gap-1"
           >
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                data-design-id={`navigation-link-${link.label.toLowerCase().replace(" ", "-")}`}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50 cursor-pointer"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("/") ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  data-design-id={`navigation-link-${link.label.toLowerCase().replace(" ", "-")}`}
+                  className={cn(
+                    "px-4 py-2 text-sm transition-colors rounded-lg hover:bg-secondary/50 cursor-pointer",
+                    pathname?.startsWith(link.href)
+                      ? "text-primary font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={isHome ? link.href : `/${link.href}`}
+                  onClick={(e) => scrollToSection(e, link.href)}
+                  data-design-id={`navigation-link-${link.label.toLowerCase().replace(" ", "-")}`}
+                  className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50 cursor-pointer"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
 
+          {/* Desktop actions */}
           <div
-            data-design-id="navigation-actions"
-            className="hidden md:flex items-center gap-3"
+            data-design-id="navigation-desktop-actions"
+            className="hidden md:flex items-center gap-2"
           >
             <Button
-              variant="ghost"
+              variant="outline"
               size="sm"
               data-design-id="navigation-github-button"
               className="gap-2"
               asChild
             >
               <a
-                href="https://github.com/pt-act/quantumreef"
+                href="https://github.com/pt-act/QuantumReef-main"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View on GitHub"
@@ -125,12 +143,17 @@ export function Navigation() {
               className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2"
               asChild
             >
-              <a href="#download" onClick={(e) => scrollToSection(e, "#download")}>
+              <a
+                href={isHome ? "#download" : "/#download"}
+                onClick={isHome ? (e) => scrollToSection(e, "#download") : undefined}
+                rel={isHome ? undefined : undefined}
+              >
                 Download
               </a>
             </Button>
           </div>
 
+          {/* Mobile hamburger */}
           <button
             type="button"
             data-design-id="navigation-mobile-toggle"
@@ -144,6 +167,7 @@ export function Navigation() {
           </button>
         </div>
 
+        {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div
             id="mobile-menu"
@@ -151,17 +175,34 @@ export function Navigation() {
             className="md:hidden mt-4 pb-4 border-t border-border/50 pt-4 animate-in slide-in-from-top-2 duration-200"
           >
             <div className="flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => scrollToSection(e, link.href)}
-                  data-design-id={`navigation-mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
-                  className="px-4 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50 cursor-pointer"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.href.startsWith("/") ? (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    data-design-id={`navigation-mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
+                    className={cn(
+                      "px-4 py-3 text-sm transition-colors rounded-lg hover:bg-secondary/50 cursor-pointer",
+                      pathname?.startsWith(link.href)
+                        ? "text-primary font-medium"
+                        : "text-muted-foreground hover:text-foreground"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={isHome ? link.href : `/${link.href}`}
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    data-design-id={`navigation-mobile-link-${link.label.toLowerCase().replace(" ", "-")}`}
+                    className="px-4 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50 cursor-pointer"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
               <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-border/50">
                 <Button
                   variant="outline"
@@ -171,7 +212,7 @@ export function Navigation() {
                   asChild
                 >
                   <a
-                    href="https://github.com/pt-act/quantumreef"
+                    href="https://github.com/pt-act/QuantumReef-main"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -185,7 +226,10 @@ export function Navigation() {
                   className="justify-center bg-primary text-primary-foreground"
                   asChild
                 >
-                  <a href="#download" onClick={(e) => scrollToSection(e, "#download")}>
+                  <a
+                    href={isHome ? "#download" : "/#download"}
+                    onClick={isHome ? (e) => scrollToSection(e, "#download") : undefined}
+                  >
                     Download Now
                   </a>
                 </Button>

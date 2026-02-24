@@ -12,26 +12,27 @@ import {
 const footerLinks = {
   product: [
     { label: "Features", href: "#features" },
+    { label: "Documentation", href: "/docs" },
     { label: "Download", href: "#download" },
-    { label: "Roadmap", href: "https://github.com/pt-act/quantumreef/blob/main/ROADMAP.md" },
-    { label: "Changelog", href: "https://github.com/pt-act/quantumreef/releases" },
+    { label: "Roadmap", href: "https://github.com/pt-act/QuantumReef-main/blob/main/ROADMAP.md" },
+    { label: "Changelog", href: "https://github.com/pt-act/QuantumReef-main/releases" },
   ],
   resources: [
-    { label: "Documentation", href: "https://docs.quantumreef.dev" },
+    { label: "Documentation", href: "/docs" },
     { label: "Quick Start", href: "#how-it-works" },
     { label: "API Reference", href: "https://docs.quantumreef.dev/api" },
-    { label: "Examples", href: "https://github.com/pt-act/quantumreef/tree/main/examples" },
+    { label: "Examples", href: "https://github.com/pt-act/QuantumReef-main/tree/main/examples" },
   ],
   community: [
-    { label: "GitHub", href: "https://github.com/pt-act/quantumreef" },
+    { label: "GitHub", href: "https://github.com/pt-act/QuantumReef-main" },
     { label: "Discord", href: "https://discord.gg/quantumreef" },
     { label: "Twitter", href: "https://twitter.com/quantumreef" },
-    { label: "Contributing", href: "https://github.com/pt-act/quantumreef/blob/main/CONTRIBUTING.md" },
+    { label: "Contributing", href: "https://github.com/pt-act/QuantumReef-main/blob/main/CONTRIBUTING.md" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
-    { label: "License (MIT)", href: "https://github.com/pt-act/quantumreef/blob/main/LICENSE" },
+    { label: "License (MIT)", href: "https://github.com/pt-act/QuantumReef-main/blob/main/LICENSE" },
   ],
 };
 
@@ -82,7 +83,7 @@ export function Footer() {
               className="flex items-center gap-4"
             >
               <a
-                href="https://github.com/pt-act/quantumreef"
+                href="https://github.com/pt-act/QuantumReef-main"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-design-id="footer-social-github"

@@ -55,7 +55,7 @@ export function Hero() {
             </Badge>
             
             <a
-              href="https://github.com/pt-act/quantumreef"
+              href="https://github.com/pt-act/QuantumReef-main"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border/50 bg-card/30 hover:bg-card/50 transition-colors animate-in fade-in slide-in-from-bottom-2 duration-500"
@@ -117,7 +117,7 @@ export function Hero() {
               asChild
             >
               <a
-                href="https://github.com/pt-act/quantumreef"
+                href="https://github.com/pt-act/QuantumReef-main"
                 target="_blank"
                 rel="noopener noreferrer"
               >
