@@ -5,27 +5,27 @@ import { Badge } from "@/components/ui/badge";
 const steps = [
   {
     number: "01",
-    title: "Install in Seconds",
+    title: "Connect to Clawtopus PM",
     description:
-      "Download and install QuantumReef with a single command. Available for macOS, Linux, and Windows.",
-    code: "brew install quantumreef",
-    designId: "step-install",
+      "QuantumReef receives tasks from your Clawtopus AI Project Manager via WebSocket. Or use standalone with direct API access.",
+    code: "quantumreef --clawtopus ws://localhost:18789",
+    designId: "step-connect",
   },
   {
     number: "02",
-    title: "Choose Your Engine",
+    title: "Multi-Agent Execution",
     description:
-      "Select from OpenCode, RovoDev, or Kiro CLI. Switch anytime without losing context or progress.",
-    code: 'quantumreef config --engine "clawtopus"',
-    designId: "step-engine",
+      "Execute tasks across 7 domains with 12 engine integrations. Parallel, sequential, or pipeline strategies. Real-time progress streaming.",
+    code: "clawtopus dispatch \"Build game with code + art + audio\"",
+    designId: "step-execute",
   },
   {
     number: "03",
-    title: "Start Building",
+    title: "Creation Emerges",
     description:
-      "Begin your AI-assisted development workflow. Your sessions sync automatically across all devices.",
-    code: "quantumreef start",
-    designId: "step-build",
+      "Specialists collaborate across domains—code, design, data, media—all coordinated. Results delivered back to your messaging app.",
+    code: "✓ Game delivered with all components integrated",
+    designId: "step-deliver",
   },
 ];
 
@@ -64,8 +64,8 @@ export function HowItWorks() {
             data-design-id="how-it-works-subtitle"
             className="text-lg text-muted-foreground"
           >
-            No complex setup. No configuration hell. Just install, choose your
-            engine, and start building.
+            Connect to Clawtopus PM or use standalone. Execute across domains.
+            Watch specialists collaborate. Your creation emerges.
           </p>
         </div>
 

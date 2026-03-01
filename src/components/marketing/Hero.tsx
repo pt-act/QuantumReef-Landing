@@ -82,16 +82,16 @@ export function Hero() {
             data-design-id="hero-title"
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700"
           >
-            <span className="block">One Workspace.</span>
-            <span className="block text-gradient mt-2">Any AI Engine.</span>
-            <span className="block mt-2">Every Device.</span>
+            <span className="block">Polymorphic</span>
+            <span className="block text-gradient mt-2">Execution Playground.</span>
+            <span className="block mt-2">7 Domains. 12 Engines.</span>
           </h1>
 
           <p
             data-design-id="hero-description"
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-6 duration-900"
           >
-            The evolved AI development platform with multi-engine support, advanced workflow management, and cross-platform continuity. Switch between OpenCode, RovoDev, and Kiro CLI without migration. Your sessions sync everywhere—desktop, mobile, CLI.
+            The universal execution environment where AI specialists work across Code, Design, Data, Media, Test, API, and Validation domains. Integrates seamlessly with Clawtopus PM to orchestrate multi-agent workflows with real-time progress streaming.
           </p>
 
           <div
@@ -202,7 +202,7 @@ export function Hero() {
                   data-design-id="hero-visual-title"
                   className="ml-4 text-xs text-muted-foreground font-mono"
                 >
-                  quantumreef — Multi-Agent AI Orchestration
+                  quantumreef — Polymorphic Sandbox Execution
                 </span>
               </div>
               <div
@@ -216,27 +216,26 @@ export function Hero() {
                   >
                     <span className="text-primary">$</span>
                     <span className="text-muted-foreground">
-                      quantumreef start --engine
+                      clawtopus dispatch "Build game about time-traveling cats"
                     </span>
-                    <span className="text-accent">opencode</span>
                   </div>
                   <div
                     data-design-id="hero-visual-line-2"
                     className="text-muted-foreground/70"
                   >
-                    ✓ Engine initialized: OpenCode v2.1
+                    ✓ PM Planning: 4 specialists activated
                   </div>
                   <div
                     data-design-id="hero-visual-line-3"
                     className="text-muted-foreground/70"
                   >
-                    ✓ Session synced across 3 devices
+                    ✓ Code Domain: Engine + Systems [Claude]
                   </div>
                   <div
                     data-design-id="hero-visual-line-4"
                     className="text-muted-foreground/70"
                   >
-                    ✓ MCP Tools loaded: 12 active
+                    ✓ Design Domain: Art + UI [DALL-E] ✓ Media: Audio [Suno]
                   </div>
                   <div
                     data-design-id="hero-visual-line-5"
@@ -244,7 +243,7 @@ export function Hero() {
                   >
                     <span className="text-primary">$</span>
                     <span className="text-muted-foreground">
-                      Ready for AI-assisted development
+                      Orchestrating 4 agents across 3 domains...
                     </span>
                     <span className="inline-block w-2 h-4 bg-primary animate-pulse" />
                   </div>

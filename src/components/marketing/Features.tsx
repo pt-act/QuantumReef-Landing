@@ -56,44 +56,44 @@ function FeatureCard({ icon, title, description, designId }: FeatureCardProps) {
 const features = [
   {
     icon: <IconClawtopus size={24} />,
-    title: "Multi-Engine Architecture",
+    title: "7 Domain Adapters",
     description:
-      "Switch between OpenCode, RovoDev, and Kiro CLI based on your needs. Pluggable engine framework with unified interface. No vendor lock-in, no migration.",
-    designId: "feature-card-multi-engine",
+      "Code, Design, Data, Media, Test, API, and Validation domains—each with specialized execution environments. Multi-language support, visual generation, data pipelines, media synthesis, and more.",
+    designId: "feature-card-domains",
   },
   {
     icon: <IconSync size={24} />,
-    title: "Advanced Workflow States",
+    title: "12 Engine Integrations",
     description:
-      "Track sessions through todo → in_progress → needs_review → done. Star important work, organize with inbox/archive buckets. Full workflow visibility.",
-    designId: "feature-card-sync",
-  },
-  {
-    icon: <IconShield size={24} />,
-    title: "Enterprise-Grade Security",
-    description:
-      "4 permission modes (deny/readonly/localreadonly/allow), CVE-2026-22812 mitigation, XSS protection, rate limiting, and pairing code expiry. Production-ready from day one.",
-    designId: "feature-card-privacy",
+      "Works with Claude Code, OpenCode, RovoDev, GitHub Copilot, Aider, Goose, Gemini CLI, Codex, Kiro, Droid, Kilocode, and Clawtopus. Route tasks to the optimal engine for each job.",
+    designId: "feature-card-engines",
   },
   {
     icon: <IconParallel size={24} />,
-    title: "Cross-Dimensional Sync",
+    title: "Multi-Agent Orchestration",
     description:
-      "Start in terminal, continue on desktop, review on mobile. True workflow continuity with persistent session states across all platforms.",
-    designId: "feature-card-session",
+      "Parallel execution for independent tasks. Sequential for dependencies. Pipeline for data flows. Coordinate multiple AI specialists working together with shared context.",
+    designId: "feature-card-orchestration",
+  },
+  {
+    icon: <IconShield size={24} />,
+    title: "Clawtopus PM Integration",
+    description:
+      "Receive tasks from Clawtopus AI Project Manager via WebSocket. Real-time progress streaming. Human approval points at every stage. Complete ecosystem integration.",
+    designId: "feature-card-clawtopus",
   },
   {
     icon: <IconPlugin size={24} />,
-    title: "MCP Tools Ecosystem",
+    title: "Polymorphic Execution",
     description:
-      "Extensible Model Context Protocol tools for infinite customization. Build and share tools that integrate seamlessly with your workflow.",
-    designId: "feature-card-mcp",
+      "Domain-adaptive sandbox that routes tasks to specialized environments. Code execution with security controls. Visual generation. Data transformation. Media synthesis. All unified.",
+    designId: "feature-card-polymorphic",
   },
   {
     icon: <IconOpenSource size={24} />,
     title: "Fully Open Source",
     description:
-      "Transparent, auditable, and community-driven. Contribute to the roadmap, review the code, and shape the future of AI development.",
+      "Transparent, auditable, and community-driven. ~9,000 lines of integration code. Self-hosted. Your data stays on your machines. No cloud dependencies.",
     designId: "feature-card-opensource",
   },
 ];
@@ -128,15 +128,15 @@ export function Features() {
             data-design-id="features-title"
             className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
           >
-            Built for developers who{" "}
-            <span className="text-gradient">refuse to compromise</span>
+            Universal execution across{" "}
+            <span className="text-gradient">7 domains</span>
           </h2>
           <p
             data-design-id="features-subtitle"
             className="text-lg text-muted-foreground"
           >
-            Every feature designed with power, privacy, and flexibility in
-            mind. No tradeoffs required.
+            Code, Design, Data, Media, Test, API, Validation—each optimized for its domain. 
+            12 engine integrations. Multi-agent orchestration. Clawtopus PM integration.
           </p>
         </div>
 
