@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/badge";
 const steps = [
   {
     number: "01",
-    title: "Connect to Clawtopus PM",
+    title: "Connect to a PM",
     description:
-      "QuantumReef receives tasks from your Clawtopus AI Project Manager via WebSocket. Or use standalone with direct API access.",
-    code: "quantumreef --clawtopus ws://localhost:18789",
+      "QuantumReef receives tasks from Clawtopus or 88.pi/Nity via WebSocket. Nity adds memory, quality gates, and self-reflection. Or use standalone with direct API access.",
+    code: "quantumreef --clawtopus ws://localhost:7777",
     designId: "step-connect",
   },
   {
@@ -64,7 +64,7 @@ export function HowItWorks() {
             data-design-id="how-it-works-subtitle"
             className="text-lg text-muted-foreground"
           >
-            Connect to Clawtopus PM or use standalone. Execute across domains.
+            Connect to Clawtopus PM or 88.pi/Nity. Execute across domains.
             Watch specialists collaborate. Your creation emerges.
           </p>
         </div>

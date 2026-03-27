@@ -77,9 +77,9 @@ const features = [
   },
   {
     icon: <IconShield size={24} />,
-    title: "Clawtopus PM Integration",
+    title: "PM Integrations",
     description:
-      "Receive tasks from Clawtopus AI Project Manager via WebSocket. Real-time progress streaming. Human approval points at every stage. Complete ecosystem integration.",
+      "Receive tasks from Clawtopus or 88.pi/Nity via WebSocket. Nity adds memory, quality gates, and self-reflection on top of task dispatch. Real-time progress streaming. Human approval points at every stage.",
     designId: "feature-card-clawtopus",
   },
   {
@@ -136,7 +136,7 @@ export function Features() {
             className="text-lg text-muted-foreground"
           >
             Code, Design, Data, Media, Test, API, Validation—each optimized for its domain. 
-            12 engine integrations. Multi-agent orchestration. Clawtopus PM integration.
+            12 engine integrations including 88.pi/Nity. Multi-agent orchestration. PM integrations.
           </p>
         </div>
 

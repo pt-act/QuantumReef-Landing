@@ -60,8 +60,8 @@ const sections = [
     iconBg: "bg-cyan-500/10 border-cyan-500/20",
     iconColor: "text-cyan-400",
     badge: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-    badgeLabel: "10 engines",
-    description: "Deep-dive docs for every supported AI engine — from OpenCode and RovoDev to Gemini CLI, Aider, Goose, and more.",
+    badgeLabel: "11 engines",
+    description: "Deep-dive docs for every supported AI engine — from OpenCode and RovoDev to Nity (88.pi PM layer), Gemini CLI, Aider, Goose, and more.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
         <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -178,6 +178,8 @@ const engines = [
   { name: "Kiro", color: "bg-pink-500/20 text-pink-400 border-pink-500/30", initial: "KR" },
   { name: "Codex", color: "bg-cyan-500/20 text-cyan-400 border-cyan-500/30", initial: "CX" },
   { name: "Kilo", color: "bg-violet-500/20 text-violet-400 border-violet-500/30", initial: "KC" },
+  { name: "Nity", color: "bg-teal-500/20 text-teal-400 border-teal-500/30", initial: "88" },
+  { name: "Nity", color: "bg-teal-500/20 text-teal-400 border-teal-500/30", initial: "88" },
   { name: "Droid", color: "bg-rose-500/20 text-rose-400 border-rose-500/30", initial: "DR" },
 ];
 
