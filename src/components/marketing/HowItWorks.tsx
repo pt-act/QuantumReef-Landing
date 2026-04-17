@@ -16,7 +16,7 @@ const steps = [
     title: "Multi-Agent Execution",
     description:
       "Execute tasks across 7 domains with 12 engine integrations. Parallel, sequential, or pipeline strategies. Real-time progress streaming.",
-    code: "clawtopus dispatch \"Build game with code + art + audio\"",
+    code: "nity task \"Build game with code + art + audio\"",
     designId: "step-execute",
   },
   {

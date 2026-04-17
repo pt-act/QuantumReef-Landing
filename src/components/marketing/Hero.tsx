@@ -84,14 +84,14 @@ export function Hero() {
           >
             <span className="block">Polymorphic</span>
             <span className="block text-gradient mt-2">Execution Playground.</span>
-            <span className="block mt-2">7 Domains. 12 Engines.</span>
+            <span className="block mt-2">7 Domains. 12 Engines. Orchestrated by Nity.</span>
           </h1>
 
           <p
             data-design-id="hero-description"
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-6 duration-900"
           >
-            The universal execution environment where AI specialists work across Code, Design, Data, Media, Test, API, and Validation domains. Integrates seamlessly with Clawtopus PM to orchestrate multi-agent workflows with real-time progress streaming.
+            The universal execution environment where AI specialists work across Code, Design, Data, Media, Test, API, and Validation domains. Paired with 88.pi/Nity — a collaborative PM that adds memory, quality gates, and self-reflection — for true multi-model + user synergy.
           </p>
 
           <div
@@ -202,7 +202,7 @@ export function Hero() {
                   data-design-id="hero-visual-title"
                   className="ml-4 text-xs text-muted-foreground font-mono"
                 >
-                  quantumreef — Polymorphic Sandbox Execution
+                  quantumreef — Nity x QuantumReef Playground
                 </span>
               </div>
               <div
@@ -216,26 +216,26 @@ export function Hero() {
                   >
                     <span className="text-primary">$</span>
                     <span className="text-muted-foreground">
-                      clawtopus dispatch "Build game about time-traveling cats"
+                      nity task "Build game about time-traveling cats"
                     </span>
                   </div>
                   <div
                     data-design-id="hero-visual-line-2"
                     className="text-muted-foreground/70"
                   >
-                    ✓ PM Planning: 4 specialists activated
+                    ✓ Nity: Analyzing task {">"} 4 specialists activated
                   </div>
                   <div
                     data-design-id="hero-visual-line-3"
                     className="text-muted-foreground/70"
                   >
-                    ✓ Code Domain: Engine + Systems [Claude]
+                    ✓ Code Domain: Engine + Systems {">"} Claude Code
                   </div>
                   <div
                     data-design-id="hero-visual-line-4"
                     className="text-muted-foreground/70"
                   >
-                    ✓ Design Domain: Art + UI [DALL-E] ✓ Media: Audio [Suno]
+                    ✓ Design Domain: Art + UI {">"} Gemini CLI  ✓ Media: Audio {">"} Codex
                   </div>
                   <div
                     data-design-id="hero-visual-line-5"
@@ -243,7 +243,7 @@ export function Hero() {
                   >
                     <span className="text-primary">$</span>
                     <span className="text-muted-foreground">
-                      Orchestrating 4 agents across 3 domains...
+                      Nity orchestrating 4 agents across 3 domains...
                     </span>
                     <span className="inline-block w-2 h-4 bg-primary animate-pulse" />
                   </div>
