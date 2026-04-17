@@ -77,10 +77,10 @@ const features = [
   },
   {
     icon: <IconShield size={24} />,
-    title: "PM Integrations",
+    title: "88.pi/Nity PM Integration",
     description:
-      "Receive tasks from Clawtopus or 88.pi/Nity via WebSocket. Nity adds memory, quality gates, and self-reflection on top of task dispatch. Real-time progress streaming. Human approval points at every stage.",
-    designId: "feature-card-clawtopus",
+      "Nity is the primary PM — a collaborative orchestrator that adds memory, quality gates, self-reflection, and cost transparency on top of QuantumReef's engine fabric. Real-time progress streaming. Human approval points at every stage. OpenClaw clients also connect via WebSocket.",
+    designId: "feature-card-nity-pm",
   },
   {
     icon: <IconPlugin size={24} />,
@@ -128,7 +128,7 @@ export function Features() {
             data-design-id="features-title"
             className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
           >
-            Universal execution across{" "}
+            Multi-model playground across{" "}
             <span className="text-gradient">7 domains</span>
           </h2>
           <p
@@ -136,7 +136,7 @@ export function Features() {
             className="text-lg text-muted-foreground"
           >
             Code, Design, Data, Media, Test, API, Validation—each optimized for its domain. 
-            12 engine integrations including 88.pi/Nity. Multi-agent orchestration. PM integrations.
+            12 engine integrations. Orchestrated by 88.pi/Nity as PM. Multi-agent collaboration. OpenClaw compatible.
           </p>
         </div>
 

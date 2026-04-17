@@ -14,6 +14,7 @@ const footerLinks = {
     { label: "Features", href: "#features" },
     { label: "Documentation", href: "/docs" },
     { label: "Download", href: "#download" },
+    { label: "88.pi/Nity PM", href: "https://88pi.netlify.app" },
     { label: "Roadmap", href: "https://github.com/pt-act/QuantumReef-main/blob/main/ROADMAP.md" },
     { label: "Changelog", href: "https://github.com/pt-act/QuantumReef-main/releases" },
   ],
@@ -75,8 +76,8 @@ export function Footer() {
               data-design-id="footer-tagline"
               className="text-sm text-muted-foreground max-w-sm"
             >
-              The unified AI development command center. Local-first,
-              multi-engine, cross-platform.
+              The multi-model execution playground. Orchestrated by 88.pi/Nity.
+              Local-first, open source, 12 engines across 7 domains.
             </p>
             <div
               data-design-id="footer-social"

@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/badge";
 const steps = [
   {
     number: "01",
-    title: "Connect to a PM",
+    title: "Connect Nity as PM",
     description:
-      "QuantumReef receives tasks from Clawtopus or 88.pi/Nity via WebSocket. Nity adds memory, quality gates, and self-reflection. Or use standalone with direct API access.",
-    code: "quantumreef --clawtopus ws://localhost:7777",
+      "88.pi/Nity connects to QuantumReef via WebSocket, bringing memory, quality gates, self-reflection, and cost transparency. The collaborative PM for multi-model+user synergy. OpenClaw clients also supported.",
+    code: "quantumreef --pm ws://localhost:7777",
     designId: "step-connect",
   },
   {
@@ -23,8 +23,8 @@ const steps = [
     number: "03",
     title: "Creation Emerges",
     description:
-      "Specialists collaborate across domains—code, design, data, media—all coordinated. Results delivered back to your messaging app.",
-    code: "✓ Game delivered with all components integrated",
+      "Specialists collaborate across domains — code, design, data, media — all coordinated by Nity with quality gates and self-reflection. Results stream back in real time.",
+    code: "✓ Quality gate passed — all components integrated",
     designId: "step-deliver",
   },
 ];
@@ -64,8 +64,8 @@ export function HowItWorks() {
             data-design-id="how-it-works-subtitle"
             className="text-lg text-muted-foreground"
           >
-            Connect to Clawtopus PM or 88.pi/Nity. Execute across domains.
-            Watch specialists collaborate. Your creation emerges.
+            Connect 88.pi/Nity as PM. Execute across 7 domains with 12 engines.
+            Watch specialists collaborate with quality gates. Your creation emerges.
           </p>
         </div>
 

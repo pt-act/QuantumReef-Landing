@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "Which AI engines are supported?",
     answer:
-      "Currently, we support OpenCode, RovoDev, and Kiro CLI. More engines are on our roadmap. The multi-engine architecture means you can switch between them based on task needs without changing your workflow.",
+      "QuantumReef integrates 12 AI engines: Claude Code, OpenCode, RovoDev, GitHub Copilot, Aider, Goose, Gemini CLI, Codex, Kiro, Droid, Kilo Code, and Clawtopus. Each engine brings its own strengths. Nity, the PM, routes tasks to the optimal engine based on task type and past performance.",
     designId: "faq-3",
   },
   {
@@ -44,6 +44,18 @@ const faqs = [
     answer:
       "Yes! QuantumReef is designed as a command center that works alongside your existing tools. It integrates with your terminal workflow and provides a desktop interface, but doesn't replace your editor of choice.",
     designId: "faq-6",
+  },
+  {
+    question: "What is 88.pi/Nity and how does it work with QuantumReef?",
+    answer:
+      "88.pi/Nity is the primary Project Manager for QuantumReef. Nity adds memory (session brain, episodes, model tracking), quality gates, self-reflection, and cost transparency on top of QuantumReef's multi-engine execution fabric. While Nity is the collaborative PM designed for multi-model+user synergy, OpenClaw clients can also connect to QuantumReef via WebSocket for programmatic task dispatch.",
+    designId: "faq-nity",
+  },
+  {
+    question: "What can I build with QuantumReef's 7 domain adapters?",
+    answer:
+      "QuantumReef covers Code (multi-language execution), Design (visual generation), Data (pipelines & transformation), Media (synthesis & generation), Test (framework integration), API (HTTP testing), and Validation (schema verification). Combined with 12 engines and Nity's orchestration, you can build games with code+art+audio, process data pipelines with specialized engines, or validate entire systems across all domains simultaneously.",
+    designId: "faq-domains",
   },
   {
     question: "How can I contribute to the project?",

@@ -21,9 +21,21 @@ const comparisonFeatures: ComparisonFeature[] = [
   },
   {
     name: "Multi-Engine Support",
-    quantumreef: "✓ OpenCode, RovoDev, Kiro CLI",
+    quantumreef: "✓ 12 engines via Nity PM",
     copilot: "GitHub Copilot only",
     cursor: "Claude only",
+  },
+  {
+    name: "PM Orchestration",
+    quantumreef: "✓ 88.pi/Nity — memory, quality gates, reflection",
+    copilot: "No PM layer",
+    cursor: "No PM layer",
+  },
+  {
+    name: "Domain-Specific Execution",
+    quantumreef: "✓ 7 domains (Code, Design, Data, Media, Test, API, Validation)",
+    copilot: "Code only",
+    cursor: "Code only",
   },
   {
     name: "Cross-Platform Sync",
